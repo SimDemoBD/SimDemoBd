@@ -36,11 +36,6 @@ function changeRightWeight(id, val) {
 }
 window.onload = function() {
 
-    document.getElementById("expName").innerHTML = gt.gettext("Determination of EMF of a Cell");
-    //$('#olabmenuBar li:first-child a').html(gt.gettext("SAVE"));
-    //$('#olabmenuBar li:nth-child(2) a').html(gt.gettext("FULL SCREEN"));
-    //$('#olabmenuBar li:last-child a').html(gt.gettext("EXIT"));
-    //$(".labName").html(gt.gettext("Developed by CDAC Mumbai & Amrita University <br> Under research grant from department of IT"));
     controlLabel = [gt.gettext("Reset"), gt.gettext('Ag(s) -->Ag<sup>+</sup>(aq)+e<sup>-</sup>'), gt.gettext('Ag<sup>+</sup>(aq)+e<sup>-</sup>-->Ag(s)'), gt.gettext('Ag<sup>+</sup>'), gt.gettext('Ag(s)')];
     InsArray = [gt.gettext('Select Electrode: '), gt.gettext("Cathode"), gt.gettext("Anode"), gt.gettext("Concentration:"), gt.gettext('Instruction'), gt.gettext('Temperature:'), 10, 100, 0.01, 0.1, gt.gettext('Chemical Reaction'), gt.gettext('Overall'), gt.gettext('Calculation of EMF:')];
     equationarr = [gt.gettext('E cell = E&deg;cell-(RT/nF) ln '), gt.gettext('Ba<sup>2+</sup>')];
@@ -57,9 +52,8 @@ window.onload = function() {
 
     labelrod_symbols = [gt.gettext('Ba'), gt.gettext('Mg'), gt.gettext('Zn'), gt.gettext('Fe'), gt.gettext('Cu'), gt.gettext('Ag')];
     labeslsol_symbols = [gt.gettext('BaCl<sub>2</sub> (aq)'), gt.gettext('MgCl<sub>2</sub> (aq)'), gt.gettext('ZnSO<sub>4</sub> (aq)'), gt.gettext('FeSO<sub>4</sub> (aq)'), gt.gettext('CuSO<sub>4</sub> (aq)'), gt.gettext('AgNO<sub>3</sub> (aq)')];
-    electrode_img = ['bariumelectrode.png', 'magnesium_electrode.png', 'zinc_electrodes.png', 'iron_electrodes.png', 'copper_electrode.png', 'silver_electrode.png'];
+    electrode_img = ['ElectroROD1.png', 'MagnesiumROD1.png', 'ZincROD1.png', 'ElectroROD1.png', 'CopperROD1.png', 'MagnesiumROD1.png'];
     volt_measure = [gt.gettext('V')];
-    //electrolyte_img=['water.png','water.png','water.png','water_green.png','water_blue.png','water.png'];
     electrolyte_img = ['#FFF', '#FFF', '#FFF', '#3d9e84', '#0070d9', '#FFF'];
     E_cellval = [
         [0, 0.53, 2.14, 2.46, 3.24, 3.7],
@@ -168,7 +162,7 @@ window.onload = function() {
                 });
             } else {
                 $('#volt_reading').css({
-                    'left': '45%'
+                    'left': '45.5%'
                 });
             }
 

@@ -396,7 +396,8 @@
             t.position = {
                 scrollbarWidth: function() {
                     if (void 0 !== n) return n;
-                    var e, i, s = t("<div style='display:block;position:absolute;width:50px;height:50px;overflow:hidden;'><div style='height:100px;width:auto;'></div></div>"),
+                    var e, i, s = t("<div 
+                    style='display:block;position:absolute; width:500px;height:50px; overflow:hidden;'><div style='height:100px; width:auto;'></div></div>"),
                         o = s.children()[0];
                     return t("body").append(s), e = o.offsetWidth, s.css("overflow", "scroll"), i = o.offsetWidth, e === i && (i = s[0].clientWidth), s.remove(), n = e - i
                 },
