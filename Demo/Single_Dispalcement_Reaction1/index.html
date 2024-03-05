@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- Enable IE9 Standards mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" media="all" href="template/css/font.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="template/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="template/css/grid.css" />
+    <link href="template/css/mainstyle.css" rel="stylesheet" type="text/css" />
+    <link href="js/nanoscroller/nanoscroller.css" rel="stylesheet" type="text/css" />
+    <script src="js/nanoscroller/overthrow.min.js"></script>
+    <script src="js/jquery/1.7/jquery-1.7.1.js"></script>
+    <script src="js/nanoscroller/jquery.nanoscroller.js"></script>
+    <script type="text/javascript" src="js/nanoscroller/touchready.js"></script>
+    <script type="text/javascript" src="js/nanoscroller/main.js"></script>
+    <!--[if IE]><script src="js/excanvas.js"></script><![endif]-->
+    <link href="CHE/css/simstyle.css" rel="stylesheet" type="text/css" />
+    <link href="./js/trip/trip.css" rel="stylesheet" type="text/css" />
+
+    <script language="javascript" type="text/javascript" src="CHE/js/help.js"></script>
+
+    <script language="javascript" type="text/javascript" src="./js/trip/trip.min.js"></script>
+    <script type="text/javascript" language="javascript"
+        src="./js/jquery/ui/1.10.2/jquery-ui-1.10.2.custom.min.js"></script>
+    <script language="javascript" type="text/javascript" src="./js/jquery.i18n.js"></script>
+    <script type="text/javascript" language="javascript" src="./js/touchconvert.js"></script>
+    <script language="javascript">
+        var language_script = 'en-IN';
+        var language = language_script.toString();
+        language = language.slice(0, 2);
+        var gt = $;
+        gt.gettext.setLocale(language);
+    </script>
+    <script type='text/javascript' src='CHE/./locale/en-IN/LC_MESSAGES/language.json'></script>
+    <!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+    <script src="js/js-webshim/1.9.7/minified/extras/modernizr-custom.js"></script>
+    <script>
+        if (!Modernizr.inputtypes.range) {
+            document.write("<script type=\"text/javascript\" src=\"js/js-webshim/1.9.7/minified/polyfiller.js\"></" + "script>");
+            $(document).ready(function () {
+                $.webshims.setOptions("waitReady", false);
+                $.webshims.polyfill('forms-ext');
+            });
+        };
+    </script>
+
+</head>
+
+<body>
+    <div class="main">
+        <header id="silumatorTemp">
+            <div class="g99 logo">
+            </div>
+            <!-- end .g99 -->
+            <div class="g495 mainTitle">
+                <p id="expName"></p>
+            </div>
+            <!-- end .g495 -->
+            <div class="g198 menuSet">
+
+            </div>
+            <!-- end .g198 -->
+            <div class="g792 bannerFoot">
+                <ul id="olabmenuBar">
+                    <a href="#">SAVE</a>
+                    <a id="olabFullscrBtn" onClick="parent.simFullScreenOlab()" style="cursor:pointer;">FULLSCREEN</a>
+                    <a href="#">EXIT</a>
+                </ul>
+            </div>
+            <!-- end .grid_8 -->
+        </header>
+        <!-- /header -->
+        <div class="g594 canvasHolder">
+            <div id="canvasBox">
+                <script type="text/javascript" language="javascript">
+                    var simPath = "CHE/";
+                </script>
+                <script type="text/javascript" src="CHE/js/simcontrols.js"></script>
+                <canvas id="bgCanvas"
+                    style="position:absolute;height:440px;z-index:3;top:-8px; width:569px;background-image:url(CHE/images/BG.gif);"
+                    class="userSelect"></canvas>
+
+
+
+                <img id="TesttubeImg" src="CHE/images/5x_Testtube.png" class="userSelect" />
+                <img id="TesttubeRightImg" src="CHE/images/5x_TesttubeRight.png" class="userSelect" />
+                <!--<img id="nail1Img" src="CHE/images/nail1.png" onmouseover="dragNail(this.id);"/>-->
+                <div id="nail1Img" style="background-image:url(CHE/images/nail1.png);" onmousedown="changeImg(this.id);"
+                    onmouseover="dragNail(this.id);" class="ui-draggable"></div>
+                <div id="nail2Img" style="background-image:url(CHE/images/nail1.png);" onmousedown="changeImg(this.id);"
+                    onmouseover="dragNail(this.id);"> </div>
+                <img id="nailInTesttube" src="CHE/images/nailInTesttube.png" class="userSelect" />
+                <img id="TesttubegreenSolnImg" src="CHE/images/TesttubegreenSoln.png" class="userSelect" />
+                <img id="TesttubeBlueSolnImg" src="CHE/images/TesttubeBlueSoln.png" class="userSelect" />
+                <img id="TesttubeBlueSolnImgRight" src="CHE/images/TesttubeBlueSoln.png" class="userSelect" />
+                <img id="clockBody" src="CHE/images/5x_clockBody.png" class="userSelect" />
+                <img id="needle" src="CHE/images/needle.png" class="userSelect" />
+                <div id="ThreadDiv" onClick="clickThread();"></div>
+                <div id="TestubeDiv" class="userSelect"></div>
+                <img id="inferenceImg" src="CHE/images/inference.png" class="userSelect" />
+                <div id="infertooltip" class="userSelect"></div>
+                <div id="testTube" class="userSelect"></div>
+                <div id="resultdiv" class="userSelect"></div>
+                <div id="helpDiv" class="userSelect"></div>
+                <div id="tooltipLabelforClock" class="userSelect"></div>
+            </div>
+        </div>
+        <div class="g198 controlHolder">
+            <form name="lister" method="post">
+                <ul>
+                    <li>
+                        <div class="varBox">
+
+                            <p class="varTitle_1"></p><br /><br />
+                            <ol class="instructions" id="instructions"></ol>
+                        </div>
+                        <br><br><br><br><br><br>
+                        <br><br><br><br><br><br>
+                        <p align="center"><input type="button" class="subButton" id="reset" name="reset"
+                                onclick="window.location.reload()" /></p>
+
+                    </li>
+                </ul>
+        </div>
+        <script type="text/javascript">
+            var expTitle = "Single Displacement Reaction";
+            document.getElementById("expName").innerHTML = expTitle;
+        </script>
+        <footer id="tempFooter">
+            <div class="g396 footer">
+            </div>
+            <!-- end .g396 -->
+            <div class="g396 footer">
+                <p class="copyName"></p>
+            </div>
+            <div class="clear"></div>
+        </footer>
+        <!-- /footer -->
+    </div>
+</body>
+
+</html>
